@@ -49,7 +49,9 @@ public class HelloController {
             TotalPayment.setText(String.format("%.2f", totalPayment));
             welcomeText.setText("Calculation Complete!");
 
-        } catch (NumberFormatException e) {
+        }
+        // makes sure we are only getting numbers as an input
+        catch (NumberFormatException e) {
             welcomeText.setText("Invalid input!");
         }
     }
